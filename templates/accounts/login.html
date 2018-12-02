@@ -9,7 +9,9 @@
             <a href="{% url 'home' %}">Домой</a>
             <a href="{% url 'logout' %}">Выйти</a>
           {% else %}
-            <h4><a href="{% url "social:begin" "vk-oauth2" %}">Вконтакте</a></h4>
+          <h4>Войти через Вконтакте</h4>
+          <form action="{% url "social:begin" "vk-oauth2" %}">
+            <button type="submit">Авторизоваться</button>
           {% endif %}
         </div>
       </div>
