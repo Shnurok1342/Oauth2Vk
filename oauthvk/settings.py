@@ -23,6 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECRET_KEY = 'x5+c#@t-4pda%l1y*d2x)fan2-5kf+=qjs$el7)zo8*^bldwsj'
 
 from decouple import config
+import dj_database_url
 
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
